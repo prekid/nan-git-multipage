@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaNTech</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div id="header-container"></div>
+    </section>
+
+    <section>
+      <main class="hero_body" id="home-body">
+        <div class="container">
+          <div>
+            <h1 class="hero-large-text">
+              NAN TECH
+              <span class="animatedSolution">Solutions</span>
+            </h1>
+
+            <div>
+              <p
+                class="fs-4 fw-semibold bg-primary bg-opacity-75 py-2 px-3 rounded d-inline-block shadow"
+              >
+                🚧 Site is under construction 🚧
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <section class="contact bg-light py-5" id="contact">
+      <div class="container">
+        <div class="contact-us-large-text text-center mb-5">
+          <h2 class="fw-bold">GET IN TOUCH</h2>
+        </div>
+        <div class="row align-items-start">
+          <!-- Contact Info -->
+          <div class="col-lg-6 mb-4">
+            <h4 class="fw-semibold">WE ARE ACCEPTING NEW PROJECTS</h4>
+            <p>
+              Our team will be very happy to answer all your questions and
+              provide you with adequate consultation in order to raise your
+              business to a higher level.
+            </p>
+            <h4 class="mt-4">Contact Us</h4>
+            <p class="mb-2">
+              <img
+                src="./assets/images/geo-alt.svg"
+                alt="geo location icon"
+                width="20"
+                class="me-2"
+              />
+              <i>Eindhoven, Netherlands</i>
+            </p>
+            <p>
+              <a
+                href="mailto:info@nantechsolutions.nl"
+                class="text-decoration-none text-dark"
+              >
+                <img
+                  src="./assets/images/envelope-at.svg"
+                  alt="envelope icon"
+                  width="20"
+                  class="me-2"
+                />
+                info@nantechsolutions.nl
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="footer-container"></div>
+    </section>
+
+    <script>
+      fetch("./partials/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+
+          const topHeader = document.getElementById("top-header");
+          const navHeader = document.getElementById("nav-header");
+          const navPlaceholder = document.getElementById("nav-placeholder");
+
+          const navHeight = () => navHeader.offsetHeight;
+
+          function updateSticky() {
+            if (!topHeader || !navHeader || !navPlaceholder) return;
+
+            const headerBottom = topHeader.getBoundingClientRect().bottom;
+
+            if (headerBottom <= 0) {
+              navHeader.classList.add("sticky-nav");
+              navPlaceholder.style.height = `${navHeight()}px`;
+            } else {
+              navHeader.classList.remove("sticky-nav");
+              navPlaceholder.style.height = "auto";
+            }
+          }
+
+          // Call once on load and on scroll
+          updateSticky();
+          window.addEventListener("scroll", updateSticky);
+        });
+    </script>
+
+    <script>
+      fetch("./partials/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

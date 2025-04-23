@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaN:Services</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div id="header-container"></div>
+    </section>
+
+    <section class="hero_body" id="services-body">
+      <div class="smoke-overlay">
+        <h1>SERVICES</h1>
+      </div>
+    </section>
+
+    <section id="asic-fpga-design" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">ASIC and FPGA Design</h2>
+        <p class="lead">
+          We specialize in the design and development of Application-Specific
+          Integrated Circuits (ASIC) and Field-Programmable Gate Arrays (FPGA),
+          offering bespoke solutions tailored to your specific requirements.
+        </p>
+        <p>
+          Our experienced team employs cutting-edge technologies and industry
+          best practices to ensure that each design meets the highest standards
+          of performance and reliability. From initial concept through to final
+          delivery, we work closely with our clients to understand their unique
+          needs, providing innovative and cost-effective solutions.
+        </p>
+        <p>
+          Whether it’s for high-speed data processing, signal integrity, or
+          power efficiency, our ASIC and FPGA designs are optimized for a wide
+          range of applications across various industries. Partner with us to
+          leverage our expertise and achieve your design goals with precision
+          and excellence.
+        </p>
+      </div>
+    </section>
+
+    <section id="sw-hw-codesign" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">SW-HW Co-design</h2>
+        <p class="lead">
+          Our unique approach integrates software and hardware design, ensuring
+          optimal performance and compatibility across systems.
+        </p>
+        <p>
+          We utilize dedicated hardware for acceleration, such as FPGAs or GPUs,
+          to enhance the efficiency and performance of our solutions. By
+          leveraging these advanced technologies, we are able to provide faster
+          processing times, increased computational power, and improved system
+          responsiveness. Our team works diligently to achieve seamless
+          integration between software and hardware components, optimizing the
+          overall functionality and reliability of the systems we develop.
+        </p>
+        <p>
+          Whether you require high-speed data processing, complex algorithmic
+          computations, or low-latency signal processing, our SW-HW co-design
+          services are tailored to meet your specific needs. Partner with us to
+          experience the benefits of cutting-edge acceleration technologies and
+          achieve your design goals with precision and excellence.
+        </p>
+      </div>
+    </section>
+
+    <section id="digital-verification" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">Digital Verification</h2>
+        <p class="lead">
+          We provide thorough digital verification services to ensure the
+          accuracy and reliability of your digital designs.
+        </p>
+        <p>
+          Together with our partners, we can offer comprehensive services for
+          the digital verification of your ASIC designs. Our team employs
+          industry-leading methodologies and advanced tools to thoroughly test
+          and verify each design, ensuring that it meets the highest standards
+          of performance and reliability. We focus on identifying and rectifying
+          potential issues early in the development process, which helps to
+          minimize costly revisions and delays.
+        </p>
+        <p>
+          By leveraging our expertise in digital verification, you can be
+          confident that your ASIC designs will function as intended, providing
+          optimal performance and reliability in their respective applications.
+          Partner with us to ensure your digital designs are robust, efficient,
+          and ready for market deployment.
+        </p>
+      </div>
+    </section>
+
+    <section id="embedded-sw" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Embedded SW</h2>
+        <p class="lead">
+          Our expertise in embedded software ensures the seamless integration
+          and functionality of software within hardware systems.
+        </p>
+        <p>
+          In collaboration with our partners, we also provide comprehensive PCB
+          (Printed Circuit Board) and PCBA (Printed Circuit Board Assembly)
+          design services. These services encompass all aspects of PCB design,
+          from initial schematic capture and layout to final assembly and
+          testing. By leveraging our combined expertise, we ensure that each PCB
+          and PCBA design meets the highest standards of quality, performance,
+          and reliability.
+        </p>
+        <p>
+          Whether you require high-speed, high-density, or multi-layer PCBs, our
+          team is equipped to deliver solutions that meet your specific
+          requirements. Partner with us to experience the benefits of innovative
+          embedded software and top-tier PCB and PCBA design services, ensuring
+          the optimal performance and reliability of your hardware systems.
+        </p>
+      </div>
+    </section>
+
+    <section id="sw-consulting" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">SW Consulting - Frontend and Backend</h2>
+        <p class="lead">
+          We offer comprehensive software consulting services, covering both
+          frontend user interfaces and backend system architecture.
+        </p>
+        <p>
+          Our team of seasoned professionals brings vast experience in
+          designing, developing, and optimizing software systems to ensure they
+          are efficient, scalable, and reliable.
+        </p>
+        <p>
+          On the frontend side, we focus on creating intuitive and engaging user
+          interfaces that enhance user experience. We employ the latest
+          technologies and frameworks to deliver responsive and visually
+          appealing designs that meet the unique needs of our clients.
+        </p>
+        <p>
+          For backend development, we specialize in building robust and
+          high-performance system architectures that can handle large volumes of
+          data and complex computational tasks. Our backend solutions are
+          designed to integrate seamlessly with existing systems, providing
+          enhanced functionality and performance.
+        </p>
+        <p>
+          Partner with us to benefit from our holistic approach to software
+          consulting, ensuring that both the frontend and backend components of
+          your systems work harmoniously to achieve your business objectives.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div id="footer-container"></div>
+    </section>
+
+    <script>
+      fetch("./partials/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+
+          const topHeader = document.getElementById("top-header");
+          const navHeader = document.getElementById("nav-header");
+          const navPlaceholder = document.getElementById("nav-placeholder");
+
+          const navHeight = () => navHeader.offsetHeight;
+
+          function updateSticky() {
+            if (!topHeader || !navHeader || !navPlaceholder) return;
+
+            const headerBottom = topHeader.getBoundingClientRect().bottom;
+
+            if (headerBottom <= 0) {
+              navHeader.classList.add("sticky-nav");
+              navPlaceholder.style.height = `${navHeight()}px`;
+            } else {
+              navHeader.classList.remove("sticky-nav");
+              navPlaceholder.style.height = "auto";
+            }
+          }
+
+          updateSticky();
+          window.addEventListener("scroll", updateSticky);
+        });
+    </script>
+
+    <script>
+      fetch("./partials/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

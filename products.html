@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NaN:Products</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section>
+      <div id="header-container"></div>
+    </section>
+
+    <section class="hero_body" id="products-body">
+      <div class="smoke-overlay">
+        <h1>PRODUCTS</h1>
+      </div>
+    </section>
+
+    <section id="gen-accel" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">Gen-accel</h2>
+        <p class="lead">
+          Our state-of-the-art genome sequencing acceleration solution.
+        </p>
+        <p>
+          Our state-of-the-art accelerator solutions are designed specifically
+          for genome sequencing, enhancing computational efficiency and
+          performance for this critical task. Utilizing advanced FPGA
+          technology, our solutions provide unparalleled speed and accuracy in
+          processing vast amounts of genomic data. By integrating seamlessly
+          with existing systems, our accelerators support high-throughput
+          sequencing, ensuring reliable and rapid results. Partner with us to
+          leverage cutting-edge technology that drives breakthroughs in genomics
+          research and application.
+        </p>
+      </div>
+    </section>
+
+    <section id="fpga-nanaccel" class="py-5">
+      <div class="container">
+        <h2 class="mb-4">FPGA NaNAccel</h2>
+        <p class="lead">
+          Our specialized FPGA acceleration solutions provide unparalleled speed
+          and agility for complex computing tasks.
+        </p>
+        <p>
+          We have developed a cutting-edge IP capable of streaming massive
+          amounts of data into the accelerator FPGA card. This technology
+          ensures low latency and high efficiency during data processing. Our
+          accelerator solutions leverage advanced FPGA technology to provide
+          unparalleled speed and accuracy, making them ideal for high-throughput
+          tasks such as genome sequencing. By integrating seamlessly with
+          existing systems, our IP facilitates rapid and reliable data
+          processing, supporting breakthroughs in various fields of research and
+          application. Partner with us to experience the benefits of our
+          state-of-the-art FPGA acceleration solutions, designed to handle the
+          demands of big data with exceptional performance and reliability.
+        </p>
+      </div>
+    </section>
+
+    <section id="support" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">Support</h2>
+        <p class="lead">
+          We offer robust support services to ensure the continuous and optimal
+          operation of our products.
+        </p>
+        <p>
+          Our dedicated team of technical experts is available around the clock
+          to assist with any issues or inquiries you may have. We provide
+          comprehensive training and documentation to help you get the most out
+          of our solutions. Additionally, we offer regular updates and
+          maintenance to keep your systems running smoothly and efficiently.
+        </p>
+        <p>
+          Our support services include troubleshooting, performance monitoring,
+          and proactive maintenance to prevent potential issues before they
+          arise. We also offer tailored support packages to meet the specific
+          needs of your organization, ensuring that you have the resources and
+          assistance necessary to achieve your business objectives. Partner with
+          us to experience unparalleled support and service, designed to
+          maximize the value and performance of our cutting-edge technology
+          solutions.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div id="footer-container"></div>
+    </section>
+
+    <script>
+      fetch("./partials/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+
+          const topHeader = document.getElementById("top-header");
+          const navHeader = document.getElementById("nav-header");
+          const navPlaceholder = document.getElementById("nav-placeholder");
+
+          const navHeight = () => navHeader.offsetHeight;
+
+          function updateSticky() {
+            if (!topHeader || !navHeader || !navPlaceholder) return;
+
+            const headerBottom = topHeader.getBoundingClientRect().bottom;
+
+            if (headerBottom <= 0) {
+              navHeader.classList.add("sticky-nav");
+              navPlaceholder.style.height = `${navHeight()}px`;
+            } else {
+              navHeader.classList.remove("sticky-nav");
+              navPlaceholder.style.height = "auto";
+            }
+          }
+
+          // Call once on load and on scroll
+          updateSticky();
+          window.addEventListener("scroll", updateSticky);
+        });
+    </script>
+
+    <script>
+      fetch("./partials/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
+
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

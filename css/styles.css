@@ -1,0 +1,162 @@
+/* Logo */
+.logo img {
+  max-width: 250px;
+  height: auto;
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+}
+
+/* Top Header */
+#top-header {
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+/* Sticky Navbar styles */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Nav Placeholder */
+#nav-placeholder {
+  height: auto;
+}
+/* Main Spacing */
+main {
+  padding-top: 0;
+  transition: padding-top 0.3s ease;
+}
+
+/* Hero Section */
+.hero_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  height: 50vh;
+  text-align: center;
+  padding: 0 1rem;
+}
+h1 {
+  font-size: 4rem;
+}
+/* Backgrounds and Smoke Effects */
+#home-body {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0) 45%,
+      rgba(255, 255, 255, 0) 55%,
+      rgba(255, 255, 255, 0.1) 100%
+    ),
+    url(../assets/images/HEROimg-1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#company-body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.6) 1%,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0) 90%,
+      rgba(255, 255, 255, 0) 99%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(255, 255, 255, 0.4),
+      transparent 40%
+    ),
+    url(../assets/images/hero-cubes.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#products-body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.6) 1%,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0) 90%,
+      rgba(255, 255, 255, 0) 99%
+    ),
+    radial-gradient(
+      ellipse at bottom,
+      rgba(255, 255, 255, 0.4),
+      transparent 40%
+    ),
+    url(../assets/images/hero-fiber.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#services-body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 110, 255, 0.4) 0%,
+      rgba(0, 110, 255, 0.2) 20%,
+      rgba(0, 110, 255, 0) 50%,
+      rgba(0, 110, 255, 0) 100%
+    ),
+    url(../assets/images/hero-nasa.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
+}
+
+/* COMPANY PAGE css */
+
+/* About & Vision */
+.about-img,
+.vision-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  /* Blueish shadow with better visibility */
+  box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4) !important; /* Increased size and opacity */
+}
+
+/* Core Team */
+.standout {
+  margin-bottom: 3rem;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.standout:hover {
+  transform: translateY(-10px);
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
+  box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
+}
+
+/* Middle card standout */
+#chris {
+  transform: translateY(12px) scale(1.03);
+  z-index: 1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 6px 20px rgba(0, 110, 255, 0.4); */
+}
+
+#chris:hover {
+  transform: translateY(2px) scale(1.03); /* hover offsets initial 12px down */
+  box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
+}
