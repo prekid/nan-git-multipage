@@ -160,3 +160,21 @@ h1 {
   transform: translateY(2px) scale(1.03); /* hover offsets initial 12px down */
   box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
 }
+
+/* ovo cu da testiram posle git commit-a */
+/*
+#sticky-logo {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+#sticky-logo.visible {
+  opacity: 1;
+  transform: translateY(0);
+  display: block !important;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+} */
