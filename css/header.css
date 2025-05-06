@@ -1,0 +1,51 @@
+/* Logo */
+.logo img {
+  max-width: 250px;
+  height: auto;
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+}
+
+/* Top Header */
+#top-header {
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+/* Sticky Navbar styles */
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Nav Placeholder */
+#nav-placeholder {
+  height: auto;
+}
+
+/* ovo cu da testiram posle git commit-a */
+/*
+#sticky-logo {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+#sticky-logo.visible {
+  opacity: 1;
+  transform: translateY(0);
+  display: block !important;
+}
+
+.navbar-brand img {
+  max-height: 40px;
+} */
