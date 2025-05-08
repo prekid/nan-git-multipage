@@ -85,3 +85,43 @@ h1 {
   background-position: center;
   box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
 }
+
+/* Home page, H1 */
+.custom-heading {
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 500;
+  color: #1e293b;
+  font-family: "YourDisplayFont", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.accelerate-container {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.accelerate-svg {
+  position: absolute;
+  top: 66%;
+  left: 0;
+  height: 0.58em;
+  width: 100%;
+  z-index: 0;
+}
+
+.accelerate-text {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #1e293b, #3b82f6, #1e293b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
