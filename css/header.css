@@ -1,6 +1,6 @@
 /* Logo */
 .logo img {
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -11,12 +11,18 @@
 
 /* Top Header */
 #top-header {
-  padding-top: 30px;
+  /* padding-top: 30px; */
   text-align: center;
   position: relative;
   z-index: 2;
   transition: opacity 0.4s ease;
 }
+
+/* Section padding in styles.css is turned on, so I used this to remove it from Head-section */
+section#head-section {
+  padding: 0 0;
+}
+
 /* Sticky Navbar styles */
 .sticky-nav {
   position: fixed;

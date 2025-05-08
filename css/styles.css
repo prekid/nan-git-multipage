@@ -3,10 +3,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Main Spacing */
-main {
-  padding-top: 0;
-  transition: padding-top 0.3s ease;
+section {
+  padding-top: 2rem;
 }
 
 /* Hero Section */
@@ -21,6 +19,17 @@ main {
 }
 h1 {
   font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }
 /* Backgrounds and Smoke Effects */
 #home-body {
@@ -124,4 +133,16 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+}
+
+/* Our Services Section */
+.collapse-inner {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.collapse.show .collapse-inner {
+  opacity: 1;
+  transform: translateY(0);
 }
