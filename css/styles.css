@@ -180,15 +180,23 @@ h2 {
   display: none;
 }
 
+/* Our Values Section */
+/* Using the element (#gradient-black-blue-card) for colored card, see "Contact Us" Section below */
+.blockquote {
+  font-size: 1.2rem;
+  color: white !important;
+}
+
 /* Contact Us Section */
-#work-together-card {
+#gradient-black-blue-card {
+  border-radius: 20px !important;
   background: linear-gradient(to bottom right, black, blue);
   padding: 2rem;
   color: white;
 }
-#work-together-card .btn {
+#gradient-black-blue-card .btn {
   color: white;
 }
-#work-together-card .btn:hover {
+#gradient-black-blue-card .btn:hover {
   color: #add8ff;
 }
