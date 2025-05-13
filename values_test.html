@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Values</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Optional custom styles */
+      .badge {
+        font-size: 1.25rem;
+      }
+      .container {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Solutions Container -->
+    <div id="solutions-container"></div>
+
+    <script>
+      // JavaScript to dynamically load content
+      function loadSolutionContent(title, subtitle, badge) {
+        // Create section and container div
+        const section = document.createElement("section");
+        const container = document.createElement("div");
+        container.classList.add("container");
+
+        // Services Badge
+        const badgeDiv = document.createElement("div");
+        badgeDiv.classList.add("text-center", "mb-3");
+        const badgeElement = document.createElement("span");
+        badgeElement.classList.add(
+          "badge",
+          "bg-primary-subtle",
+          "border",
+          "border-primary-subtle",
+          "text-primary-emphasis",
+          "rounded-pill"
+        );
+        badgeElement.textContent = badge;
+        badgeDiv.appendChild(badgeElement);
+
+        // Title and Subtitle
+        const titleRow = document.createElement("div");
+        titleRow.classList.add("row");
+        const titleCol = document.createElement("div");
+        titleCol.classList.add("col-md-12", "text-center");
+        const titleElement = document.createElement("h2");
+        titleElement.textContent = title;
+        const hrElement = document.createElement("hr");
+        hrElement.classList.add(
+          "mx-auto",
+          "border",
+          "border-primary",
+          "border-3",
+          "opacity-50"
+        );
+        hrElement.style.width = "10%";
+        titleCol.appendChild(titleElement);
+        titleCol.appendChild(hrElement);
+        titleRow.appendChild(titleCol);
+
+        const subtitleDiv = document.createElement("div");
+        subtitleDiv.classList.add("pb-3", "text-center");
+        const subtitleElement = document.createElement("p");
+        subtitleElement.textContent = subtitle;
+        subtitleDiv.appendChild(subtitleElement);
+
+        // Append all sections to the container
+        container.appendChild(badgeDiv);
+        container.appendChild(titleRow);
+        container.appendChild(subtitleDiv);
+
+        // Append the container to the main section
+        section.appendChild(container);
+
+        // Append the section to the solutions container
+        document.getElementById("solutions-container").appendChild(section);
+      }
+
+      // Call the function with different content for each solution
+      loadSolutionContent(
+        "Our IP Solutions",
+        "Discover our specialized intellectual property solutions designed to accelerate and optimize your digital systems.",
+        "IP Solutions"
+      );
+
+      loadSolutionContent(
+        "FPGA Solutions",
+        "We specialize in FPGA design and implementation, offering tailored solutions for high-performance systems.",
+        "FPGA Solutions",
+        [
+          {
+            title: "High-Speed Interfaces",
+            text: "Custom IP blocks for PCIe, Ethernet, and more.",
+          },
+          {
+            title: "Low-Power Design",
+            text: "Optimized for power-sensitive applications.",
+          },
+          {
+            title: "Rapid Prototyping",
+            text: "Fast turnaround from design to deployment.",
+          },
+        ]
+      );
+
+      loadSolutionContent(
+        "ASIC Design",
+        "Our ASIC design services provide a complete end-to-end solution for your custom silicon needs.",
+        "ASIC Design"
+      );
+
+      loadSolutionContent(
+        "Embedded Systems",
+        "We offer embedded systems design, from concept to implementation, for reliable and high-performance devices.",
+        "Embedded Systems"
+      );
+
+      loadSolutionContent(
+        "Software Solutions",
+        "We provide software solutions to optimize your hardware systems, ensuring seamless integration and performance.",
+        "Software Solutions"
+      );
+    </script>
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
