@@ -116,3 +116,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  let lastScrollY = window.scrollY;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const scrollDown = window.scrollY > lastScrollY;
+      lastScrollY = window.scrollY;
+
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+        } else {
+          if (!scrollDown) {
+            entry.target.classList.remove("revealed");
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+    }
+  );
+
+  revealElements.forEach((el) => observer.observe(el));
+});

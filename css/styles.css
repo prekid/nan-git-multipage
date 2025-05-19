@@ -4,6 +4,16 @@
 #024594	Dark Azure Blue	- Deep, rich blue with a slightly muted tone
 #0071BB	Medium Azure / Cyan Blue	- Vivid medium blue with a cyan undertone
 */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: none;
+}
 
 html,
 body {
