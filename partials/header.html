@@ -1,82 +1,53 @@
 <!-- No DOCTYPE, HTML, HEAD, or BODY tags here! -->
 <link rel="stylesheet" href="./css/header.css" />
-<section id="head-section">
-  <header id="top-header">
-    <div class="logo">
-      <a href="./index.html">
-        <img
-          src="./assets/images/Logo-horizontalni-krive.svg"
-          alt="NaNTech Solutions Logo"
-        />
+
+<header id="head-section">
+  <nav
+    class="navbar navbar-expand-lg bg-white fixed-top"
+    aria-label="Navigation menu"
+  >
+    <div class="container">
+      <a class="navbar-logo" href="./index.html">
+        <img src="./assets/images/Logo-horizontalni-krive.svg" alt="Logo" />
       </a>
-    </div>
-  </header>
 
-  <div id="nav-placeholder">
-    <nav class="navbar navbar-expand-md p-2" id="nav-header">
-      <div class="container-fluid">
-        <!-- <div class="navbar-brand d-none" id="sticky-logo">
-        <a href="./index.html">
-          <img src="./assets/images/Logo-horizontalni-krive.svg" alt="Logo" height="40" />
-        </a>
-      </div> -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <button
+        id="navbarTogglerR"
+        class="navbar-togglerR d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample05"
+        aria-controls="navbarsExample05"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-togglerR-icon"
+          ><i id="navIcon" class="bi bi-list"></i
+        ></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav mx-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a
-                class="nav-link text-bs-dark fw-bold px-2"
-                aria-current="page"
-                href="./about.html"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-bs-dark fw-bold px-2"
-                aria-current="page"
-                href="./services.html"
-                >Services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-bs-dark fw-bold px-2"
-                aria-current="page"
-                href="./ip_solutions.html"
-                >IP Solutions</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-bs-dark fw-bold px-2"
-                aria-current="page"
-                href="./values.html"
-                >Values</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link text-bs-dark fw-bold px-2"
-                aria-current="page"
-                href="./contact.html"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="./services.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="./ip_solutions.html" class="nav-link">IP Solutions</a>
+          </li>
+          <li class="nav-item">
+            <a href="./values.html" class="nav-link">Values</a>
+          </li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-  </div>
-</section>
+    </div>
+  </nav>
+</header>

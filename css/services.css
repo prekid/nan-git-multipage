@@ -1,0 +1,44 @@
+.hero_body {
+  position: relative;
+  background: linear-gradient(to left, #024594, #0071bb);
+  z-index: 1;
+}
+.hero_body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/hero-cubes.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+/* #services-body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 110, 255, 0.4) 0%,
+      rgba(0, 110, 255, 0.2) 20%,
+      rgba(0, 110, 255, 0) 50%,
+      rgba(0, 110, 255, 0) 100%
+    ),
+    url(../assets/images/hero-nasa.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0, 110, 255, 0.4);
+} */
+
+#hero_hr {
+  border: none;
+  border: 1px solid #ffb700 !important;
+  width: 20%;
+  opacity: 0.5;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  #hero_hr {
+    width: 40%;
+  }
+}

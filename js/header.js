@@ -1,32 +1,45 @@
 //
+
 fetch("./partials/header.html")
-  .then((response) => response.text())
+  .then((res) => res.text())
   .then((data) => {
     document.getElementById("header-container").innerHTML = data;
 
-    const topHeader = document.getElementById("top-header");
-    const navHeader = document.getElementById("nav-header");
-    const navPlaceholder = document.getElementById("nav-placeholder");
+    const toggler = document.getElementById("navbarTogglerR");
+    const icon = document.getElementById("navIcon");
+    const navbarCollapse = document.getElementById("navbarsExample05");
 
-    const navHeight = () => navHeader.offsetHeight;
+    if (toggler && icon) {
+      toggler.addEventListener("click", function () {
+        setTimeout(() => {
+          const isExpanded = toggler.getAttribute("aria-expanded") === "true";
 
-    function updateSticky() {
-      if (!topHeader || !navHeader || !navPlaceholder) return;
-
-      const headerBottom = topHeader.getBoundingClientRect().bottom;
-
-      if (headerBottom <= 0) {
-        navHeader.classList.add("sticky-nav");
-        navPlaceholder.style.height = `${navHeight()}px`;
-      } else {
-        navHeader.classList.remove("sticky-nav");
-        navPlaceholder.style.height = "auto";
-      }
+          if (isExpanded) {
+            icon.classList.remove("bi-list");
+            icon.classList.add("bi-x", "rotating");
+          } else {
+            icon.classList.remove("bi-x", "rotating");
+            icon.classList.add("bi-list");
+          }
+        }, 100);
+      });
     }
 
-    // Call once on load and on scroll
-    updateSticky();
-    window.addEventListener("scroll", updateSticky);
+    document.addEventListener("click", function (event) {
+      const isClickInsideNavbar =
+        navbarCollapse.contains(event.target) || toggler.contains(event.target);
+      const isExpanded = toggler.getAttribute("aria-expanded") === "true";
+
+      if (!isClickInsideNavbar && isExpanded) {
+        const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (collapseInstance) {
+          collapseInstance.hide();
+        }
+
+        icon.classList.remove("bi-x", "rotating");
+        icon.classList.add("bi-list");
+      }
+    });
   });
 
 fetch("./partials/footer.html")

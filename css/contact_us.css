@@ -1,0 +1,101 @@
+/*
+
+#191919	Eerie Black -	Very dark gray
+#024594	Dark Azure Blue	- Deep, rich blue with a slightly muted tone
+#0071BB	Medium Azure / Cyan Blue	- Vivid medium blue with a cyan undertone
+*/
+
+body {
+  font-family: "Exo 2", sans-serif;
+}
+
+.hero_body {
+  position: relative;
+  background: linear-gradient(to right, #024594, #0071bb);
+  z-index: 1;
+}
+.hero_body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/hero-cubes.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.hero-angle-divider {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.angle-svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+#hero_hr {
+  border: none;
+  border: 1px solid #ffb700 !important;
+  width: 20%;
+  opacity: 0.5;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  #hero_hr {
+    width: 40%;
+  }
+}
+
+#contact_section,
+#contact-us-form {
+  background-color: #f8f9fa;
+  width: 100%;
+  margin-top: -60px;
+}
+.contact-card {
+  border-radius: 15px !important;
+  background-color: white;
+}
+#contact_first_card .btn {
+  color: #024594;
+}
+#contact_second_card a {
+  color: #024594 !important;
+}
+#contact-us-form .btn {
+  background-color: #0071bb;
+  color: white;
+}
+#contact-us-form .btn:hover {
+  background-color: #024594;
+}
+
+/* Fonts */
+.contact-card {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+.contact-card h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.contact-card p {
+  margin-bottom: 1rem;
+}
+.contact-card a.btn {
+  font-weight: 600;
+  font-size: 1rem;
+}

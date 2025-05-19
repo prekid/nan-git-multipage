@@ -1,0 +1,16 @@
+<svg width="700" height="250" viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Exo 2', sans-serif;">
+  <!-- Black Layer -->
+  <rect x="0" y="50" width="75" height="75" fill="#191919" rx="12" transform="rotate(12 37.5 87.5)" />
+
+  <!-- Blue Layer -->
+  <rect x="60" y="25" width="600" height="150" fill="#0071BB" rx="12" opacity="0.9" transform="rotate(2 360 100)" />
+  <text x="100" y="80" fill="white" font-size="48" font-weight="bold">2023</text>
+  <text x="100" y="120" fill="white" font-size="20" opacity="0.85">
+    Founded to bridge innovation gaps
+  </text>
+
+  <!-- White Layer -->
+  <rect x="600" y="50" width="90" height="90" fill="white" rx="12" opacity="0.9" transform="rotate(-10 645 95)" />
+  <text x="615" y="100" fill="#191919" font-size="24" font-weight="bold">NaN</text>
+  <text x="615" y="120" fill="#191919" font-size="12" opacity="0.85">Tech Solutions</text>
+</svg>

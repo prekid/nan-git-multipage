@@ -1,3 +1,28 @@
+/*
+
+#191919	Eerie Black -	Very dark gray
+#024594	Dark Azure Blue	- Deep, rich blue with a slightly muted tone
+#0071BB	Medium Azure / Cyan Blue	- Vivid medium blue with a cyan undertone
+*/
+.hero_body {
+  position: relative;
+  background: linear-gradient(to right, #191919, #0071bb);
+  z-index: 1;
+}
+
+#hero_hr {
+  border: none;
+  border: 1px solid #ffb700 !important;
+  width: 20%;
+  opacity: 0.5;
+  margin: 0 auto;
+}
+@media (max-width: 576px) {
+  #hero_hr {
+    width: 40%;
+  }
+}
+
 /* About & Vision */
 .about-img,
 .vision-img {

@@ -9,18 +9,21 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/ip-solutions.css" />
   </head>
   <body>
-    <section>
+    <header>
       <div id="header-container"></div>
-    </section>
-
-    <section class="hero_body" id="products-body">
-      <div class="smoke-overlay">
-        <h1>PRODUCTS</h1>
-      </div>
-    </section>
+    </header>
 
     <section id="gen-accel" class="py-5 bg-light">
       <div class="container">
@@ -92,13 +95,22 @@
       </div>
     </section>
 
-    <section>
+    <footer>
       <div id="footer-container"></div>
-    </section>
+    </footer>
 
     <script src="./js/header.js"></script>
     <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="./js/hero.js"></script>
+    <script>
+      insertHero({
+        id: "hero-products",
+        title: "NaN Tech Products",
+        subtitle:
+          "Discover our specialized intellectual property solutions designed to accelerate and optimize your digital systems.",
+      });
+    </script>
   </body>
 </html>
