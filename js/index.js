@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     badgeText: "Our Values",
     title: "Our Philosophy",
     subtitle:
-      "We work side-by-side with your engineers — sharing expertise in ASIC, FPGA, software-hardware co-design, and verification to also upskill your internal team.",
+      "We work side-by-side with your engineers — sharing expertise in ASIC, FPGA, hardware-software co-design, and verification to also upskill your internal team.",
   });
   createSectionHeader("contact-us-section", {
     badgeText: "Contact Us",
@@ -142,4 +142,50 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   revealElements.forEach((el) => observer.observe(el));
+});
+
+// About Us, Meet the Team Cards
+const cardData = [
+  {
+    title: "Vladimir",
+    text: "Co-founder and technical expert specialized in ASIC/FPGA architecture and design, hardware architecture and hardware-software co-design",
+    image: "./assets/images/Vladimir_Petrovic.d38017a8221ce1219ab0.jpg",
+  },
+  {
+    title: "Zarko",
+    text: "Co-founder with focus on embedded software and HPC systems, software architecture and hardware-software co-design",
+    image: "./assets/images/Zarko_Gvozdenovic.a2a3cc5a6c1a1847b5d2.png",
+  },
+  {
+    title: "Chris",
+    text: "Leading consultant in business development",
+    image: "./assets/images/Chris.jpg",
+  },
+  // {
+  //   title: "Andreja",
+  //   text: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+  //   image: "./assets/images/Andreja.png"
+  // },
+  // {
+  //   title: "Milos",
+  //   text: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.",
+  //   image: "./assets/images/Milos.png"
+  // }
+];
+
+const container = document.getElementById("card-container");
+
+cardData.forEach((card) => {
+  container.innerHTML += `
+    <div class="col">
+      <div class="card h-100 border-0 bg-light">
+        <img src="${card.image}" class="card-img-top card-img-fixed mx-auto d-block" alt="${card.title}">
+
+        <div class="card-body">
+          <h3 class="card-title">${card.title}</h3>
+          <p class="card-text">${card.text}</p>
+        </div>
+      </div>
+    </div>
+  `;
 });

@@ -99,3 +99,9 @@ body {
   font-weight: 600;
   font-size: 1rem;
 }
+input::placeholder,
+textarea::placeholder {
+  color: #191919 !important;
+  opacity: 0.5 !important;
+  font-style: italic;
+}
